@@ -2,13 +2,11 @@
 #include "lin.h"
 #include "megadesk.h"
 
-// Standard arduino settings
-#define HYSTERESIS            20        // 20 seems ok
-
-#define PIN_UP                0
-#define PIN_DOWN              1
-#define PIN_BEEP              3
-#define PIN_SERIAL            9
+#define HYSTERESIS            137
+#define PIN_UP                10
+#define PIN_DOWN              9
+#define PIN_BEEP              7
+#define PIN_SERIAL            1
 
 #define BEEP_DURATION         125
 #define BEEP_PAUSE            60
@@ -222,6 +220,7 @@ void loop()
       else
       {
         targetHeight = loadMemory(pushCount);
+        
 				if (targetHeight == 0)
 				{
 					beep(1, 1865);
